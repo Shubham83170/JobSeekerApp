@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+
+}
+
+body{
+overflow-x: hidden;
+}
+
+.header-side-menu .dropdown-menu.show {
+    left: -6px;
+}
+
+
+/* landing page */
+
+.hero{
+    background-color: #fdd02e;
+    color: #1e0825;
+    border-radius: 10px;
+}
+.hero p{
+    color: #1e0825; 
+}
+.contact{
+background-color: #c0b3f9;
+color: #1e0825;
+border-radius: 10px;
+
+}
+.contact p{
+    color: #1e0825; 
+}
+#features{
+    color: #1e0825;
+border-radius: 10px;
+}
+#features p{
+    color: #1e0825;
+}
+
+
+
+  

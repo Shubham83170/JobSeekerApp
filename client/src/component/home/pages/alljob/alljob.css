@@ -1,0 +1,18 @@
+.alljob{
+    min-height: 100vh;
+    background-color: #fdd02e;
+    /* color: #1e0825; */
+ 
+    border-radius: 10px;
+}
+.alljob a{
+    background-color: #6dd0fe;
+    color: #1e0825;
+}
+.alljob-card{
+    color: #1e0825 !important;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 53%);
+}
+
+
