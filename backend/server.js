@@ -7,7 +7,7 @@ const port = process.env.port || 6800
 require('./database/connection')
 const myroute = require('./routes/myroutes')
 myapp.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://jobseekerapp-4.onrender.com",
     credentials:true
 }))
 myapp.use(express.json()) //ye line hamesh app.use(myroutes) eske upr rhega 
