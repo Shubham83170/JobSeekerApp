@@ -8,7 +8,9 @@ const UserContext = ({children}) => {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true);
   const [userData, setUserData]=useState(null)
-  const serverUrl = "http://localhost:5800"
+  
+  const serverUrl = "https://jobseekerapp-1.onrender.com"
+  // const serverUrl = "http://localhost:5800"
   const getUserData = async()=>{
     try {
       let{data }=await axios.get(serverUrl + "/getuserdata",{
