@@ -77,7 +77,7 @@ const Login = () => {
                     <div className="row gx-lg-5 align-items-center mb-5">
                         <div className="col-lg-6 mb-5 mb-lg-0">
                             <h1 className="my-5 display-5 fw-bold ls-tight" style={{ color: "hsl(218, 81%, 95%)" }}>
-                               Login and take <br />
+                                and take <br />
                                 <span style={{ color: "hsl(218, 81%, 75%)" }}>one step closer to your career goals.</span>
                             </h1>
                             <p className="mb-4 opacity-70" style={{ color: "hsl(218, 81%, 95%)" }}>
