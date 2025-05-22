@@ -15,6 +15,14 @@ myapp.use(cookieParser()) //ye line hamesh app.use(myroutes) eske upr rhega
 myapp.use(myroute)
 
 
+//  React client build serve
+myapp.use(express.static(path.join(__dirname, 'client', 'build')))
+
+myapp.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+})
+
+
 
 myapp.listen(port,()=>{
     console.log(`running on this port ${port}`);
