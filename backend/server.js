@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const myapp = express()
 const cors = require('cors')
 const cookieParser = require("cookie-parser")
@@ -16,10 +17,11 @@ myapp.use(myroute)
 
 
 //  React client build serve
-myapp.use(express.static(path.join(__dirname, 'client', 'build')))
+// ✅ Serve Vite client build files from dist
+myapp.use(express.static(path.join(__dirname, 'client', 'dist')))
 
 myapp.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'))
 })
 
 
