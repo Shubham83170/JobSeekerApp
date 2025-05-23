@@ -7,7 +7,7 @@ import axios from 'axios';
 import { jobContext } from '../../usercontext/UserContext';
 
 const Login = () => {
-    const {userData,setUserData,getUserData,serverUrl } = useContext(jobContext)
+    const { userData, setUserData, getUserData, serverUrl } = useContext(jobContext)
     const navigate = useNavigate()
 
 
@@ -23,12 +23,12 @@ const Login = () => {
 
     }
 
-    const saveData = async(e) => {
-        
+    const saveData = async (e) => {
+
         try {
             e.preventDefault()
-            const {data }= await axios.post(serverUrl+"/login",loginInput,{
-                withCredentials:true
+            const { data } = await axios.post(serverUrl + "/login", loginInput, {
+                withCredentials: true
             })
             Swal.fire({
                 title: "Login Successful",
@@ -37,18 +37,18 @@ const Login = () => {
                 confirmButtonText: 'Ok!'
             })
             // console.log(data.user);
-            
-            
+
+
             setUserData(data.user)
             await getUserData()
 
             navigate("/")
-           
-                // alert("Login Successful");
-                
-         
 
-            
+            // alert("Login Successful");
+
+
+
+
         } catch (error) {
             // console.log(error);
             Swal.fire({
@@ -58,17 +58,17 @@ const Login = () => {
                 confirmButtonText: 'Ok!'
             })
 
-         
+
             // alert(error.response.data.message)
-            
-            
+
+
         }
-       
+
 
     }
-// useEffect(()=>{
-//     registerApi()
-// })
+    // useEffect(()=>{
+    //     registerApi()
+    // })
 
     return (
         <div>
@@ -77,12 +77,12 @@ const Login = () => {
                     <div className="row gx-lg-5 align-items-center mb-5">
                         <div className="col-lg-6 mb-5 mb-lg-0">
                             <h1 className="my-5 display-5 fw-bold ls-tight" style={{ color: "hsl(218, 81%, 95%)" }}>
-                               Login and take <br />
+                                Login and take <br />
                                 <span style={{ color: "hsl(218, 81%, 75%)" }}>one step closer to your career goals.</span>
                             </h1>
                             <p className="mb-4 opacity-70" style={{ color: "hsl(218, 81%, 95%)" }}>
-                              Sign in to access exclusive job postings, manage your applications, and stay connected with the latest career opportunities.
-Your next opportunity is just one login away.
+                                Sign in to access exclusive job postings, manage your applications, and stay connected with the latest career opportunities.
+                                Your next opportunity is just one login away.
                             </p>
                         </div>
 
@@ -97,13 +97,13 @@ Your next opportunity is just one login away.
 
 
 
-                                        <div data-mdb-input-init className="form-outline mb-4">
+                                        <div data-mdb-input-init className="form-outline mb-4 label-left-align">
                                             <label className="form-label" htmlFor="form3Example3">Email address</label>
                                             <input type="email" id="form3Example3" value={loginInput.email} name='email' onChange={handlerChange} className="form-control" />
                                         </div>
 
 
-                                        <div data-mdb-input-init className="form-outline mb-4">
+                                        <div data-mdb-input-init className="form-outline mb-4 label-left-align">
                                             <label className="form-label" htmlFor="form3Example4">Password</label>
                                             <input type="password" id="form3Example4" value={loginInput.pass} name='pass'
                                                 onChange={handlerChange} className="form-control" />
@@ -111,9 +111,9 @@ Your next opportunity is just one login away.
                                         <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block mb-4">
                                             Login
                                         </button>
-                                       
-                                        
-                                        <p className='mt-3 text-center' onClick={()=>navigate("/register")}>Want to create new account ? <Link className='text-primary'>Sign Up</Link></p>
+
+
+                                        <p className='mt-3 text-center' onClick={() => navigate("/register")}>Want to create new account ? <Link className='text-primary'>Sign Up</Link></p>
                                     </form>
                                 </div>
                             </div>

@@ -37,3 +37,12 @@
     background-color: hsla(0, 0%, 100%, 0.9) !important;
     backdrop-filter: saturate(200%) blur(25px);
   }
+
+    .label-left-align {
+  text-align: left !important;
+}
+
+.label-left-align label {
+  /* display: block; */
+  text-align: left !important;
+}

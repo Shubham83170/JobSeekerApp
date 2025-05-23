@@ -105,13 +105,13 @@ const Register = () => {
 
                                         <div className="row">
                                             <div className="col-md-6 mb-4">
-                                                <div data-mdb-input-init className="form-outline">
+                                                <div data-mdb-input-init className="form-outline  label-left-align">
                                                     <label className="form-label" htmlFor="form3Example1">Name</label>
                                                     <input type="text" id="form3Example1"  value={input.name} name='name' onChange={handlechange} className="form-control" />
                                                 </div>
                                             </div>
                                             <div className="col-md-6 mb-4">
-                                                <div data-mdb-input-init className="form-outline">
+                                                <div data-mdb-input-init className="form-outline  label-left-align">
                                                     <label htmlFor="fname" className="form-label">
                                                         Roll
                                                     </label>
@@ -125,13 +125,13 @@ const Register = () => {
                                         </div>
 
 
-                                        <div data-mdb-input-init className="form-outline mb-4">
+                                        <div data-mdb-input-init className="form-outline mb-4  label-left-align">
                                             <label className="form-label" htmlFor="form3Example3">Email address</label>
                                             <input type="email" id="form3Example3"  value={input.email} name='email' onChange={handlechange} className="form-control" />
                                         </div>
 
 
-                                        <div data-mdb-input-init className="form-outline mb-4">
+                                        <div data-mdb-input-init className="form-outline mb-4  label-left-align">
                                             <label className="form-label" htmlFor="form3Example4">Password</label>
                                             <input type="password"  value={input.pass} name='pass' onChange={handlechange} id="form3Example4" className="form-control" />
                                         </div>
