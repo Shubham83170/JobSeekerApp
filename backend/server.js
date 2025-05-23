@@ -16,13 +16,7 @@ myapp.use(cookieParser()) //ye line hamesh app.use(myroutes) eske upr rhega
 myapp.use(myroute)
 
 
-// //  Correct path to serve React's dist folder
-// myapp.use(express.static(path.join(__dirname, '../client/dist')))
 
-// // Correct fallback for SPA routing
-// myapp.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/dist', 'index.html'))
-// })
 
 
 
