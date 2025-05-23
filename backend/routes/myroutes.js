@@ -40,8 +40,8 @@ myroute.post('/create',async(req,res)=>{
         let token = generateToken(addUser._id)
         res.cookie("token",token,{
             httpOnly:true,
-            secure: process.env.NODE_ENVIRONMENT == "production",
-            sameSite:"strict",
+            secure: process.env.NODE_ENVIRONMENT === "production",
+            sameSite:"none",
             maxAge:7*24*60*60*1000
     
         })
@@ -82,8 +82,8 @@ myroute.post("/login",async(req,res)=>{
         const token= generateToken(existUser._id)
         res.cookie("token", token, {
             httpOnly: true,
-            secure: process.env.NODE_ENVIRONMENT == "production",
-            sameSite: "strict",
+            secure: process.env.NODE_ENVIRONMENT === "production",
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000
         })
     
