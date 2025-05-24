@@ -82,7 +82,7 @@ myroute.post("/login",async(req,res)=>{
         const token= generateToken(existUser._id)
         res.cookie("token", token, {
             httpOnly: true,
-            // secure: process.env.NODE_ENVIRONMENT === "production",
+            
             secure: true,
             sameSite: "None",
             maxAge: 7 * 24 * 60 * 60 * 1000
@@ -131,7 +131,12 @@ myroute.get("/getuserdata",checkAuth,async(req,res)=>{
 
 myroute.post("/logout",(req,res)=>{
     try {
-        res.clearCookie("token")
+        res.clearCookie("token", {
+  httpOnly: true,
+  secure: true,
+  sameSite: "None",
+
+})
         res.status(200).json({message: "Log Out Successfull"})
         
     } catch (error) {
