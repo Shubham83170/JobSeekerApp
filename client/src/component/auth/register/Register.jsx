@@ -116,7 +116,7 @@ const Register = () => {
                                                         Roll
                                                     </label>
                                                     <select className="form-select" id='fname' name='roll' value={input.roll} onChange={handlechange}>
-                                                        <option value="admin" >Admin</option>
+                                                     {/* <option value="admin" >Admin</option> */}
                                                         <option value="user" >User</option>
 
                                                     </select>
