@@ -120,8 +120,8 @@ const ApplyNow = () => {
             </div>
 
             <div className="mb-3">
-              <label className="form-label">Describe Yourself</label>
-              <textarea className="form-control" rows="4" value={input.discribe} name="discribe" onChange={handlechange} placeholder="Write something about you..." required></textarea>
+              <label className="form-label">Write the job title</label>
+              <textarea className="form-control" rows="4" value={input.discribe} name="discribe" onChange={handlechange} placeholder="e.g., Software Developer..." required></textarea>
             </div>
 
             <div className="d-grid">
