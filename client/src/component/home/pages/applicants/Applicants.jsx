@@ -29,7 +29,7 @@ const Applicants = () => {
                     <h6 className="card-subtitle mb-2 text-muted">EMAIL: <span>{d.email}</span></h6>
                     <h6 className="card-subtitle mb-2 text-muted">PHONE: <span>{d.phone}</span></h6>
                     <h6 className="card-subtitle mb-2 text-muted">ADDRESS: <span>{d.address}</span></h6>
-                    <h6 className="card-subtitle mb-2 text-muted">DESCRIPTION: <span>{d.discribe.slice(0, 60)}...</span></h6>
+                    <h6 className="card-subtitle mb-2 text-muted">JOB TITLE: <span>{d.discribe.slice(0, 60)}...</span></h6>
                   </div>
                 </div>
 
