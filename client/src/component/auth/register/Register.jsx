@@ -10,7 +10,7 @@ import { jobContext } from '../../usercontext/UserContext';
 const Register = () => {
     const {serverUrl}=useContext(jobContext)
     const navigate = useNavigate()
-
+    const [loading, setLoading]=useState(false)
     const [input, setInput] = useState({
         roll:"user",
         name:"",
@@ -28,6 +28,7 @@ const Register = () => {
     
     const saveData = async(e)=>{
         e.preventDefault()
+        setLoading(true)
         // console.log(input);
         try {
                     // post api backend me data send krne k liye
@@ -70,6 +71,7 @@ const Register = () => {
                             confirmButtonColor: 'info',
                             confirmButtonText: 'Ok!'
                         })
+                        setLoading(false)
             
             
         }
@@ -136,7 +138,7 @@ const Register = () => {
                                             <input type="password"  value={input.pass} name='pass' onChange={handlechange} id="form3Example4" className="form-control" />
                                         </div>
                                         <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block mb-4">
-                                            Sign up
+                                        {loading?"Loading":"Sign up"}
                                         </button>
                                          <p className='mt-2 text-center' onClick={() => navigate("/login")}>Already have an account ? <Link className='text-primary'>Login</Link></p>
 
