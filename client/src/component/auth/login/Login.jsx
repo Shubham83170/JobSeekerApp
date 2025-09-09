@@ -9,6 +9,7 @@ import { jobContext } from '../../usercontext/UserContext';
 const Login = () => {
     const { userData, setUserData, getUserData, serverUrl } = useContext(jobContext)
     const navigate = useNavigate()
+    const[loading, setLoading]=useState(false)
 
 
     const [loginInput, setLoginInput] = useState({
@@ -27,6 +28,7 @@ const Login = () => {
 
         try {
             e.preventDefault()
+            setLoading(true)
             const { data } = await axios.post(serverUrl + "/login", loginInput, {
                 withCredentials: true
             })
@@ -57,6 +59,7 @@ const Login = () => {
                 confirmButtonColor: 'info',
                 confirmButtonText: 'Ok!'
             })
+            setLoading(false)
 
 
             // alert(error.response.data.message)
@@ -109,7 +112,7 @@ const Login = () => {
                                                 onChange={handlerChange} className="form-control" />
                                         </div>
                                         <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block mb-4">
-                                            Login
+                                        {loading?"Loading...":"Login"}
                                         </button>
 
 

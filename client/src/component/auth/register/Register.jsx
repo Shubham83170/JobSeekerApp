@@ -138,7 +138,7 @@ const Register = () => {
                                             <input type="password"  value={input.pass} name='pass' onChange={handlechange} id="form3Example4" className="form-control" />
                                         </div>
                                         <button type="submit" data-mdb-button-init data-mdb-ripple-init className="btn btn-primary btn-block mb-4">
-                                        {loading?"Loading":"Sign up"}
+                                        {loading?"Loading...":"Sign up"}
                                         </button>
                                          <p className='mt-2 text-center' onClick={() => navigate("/login")}>Already have an account ? <Link className='text-primary'>Login</Link></p>
 
